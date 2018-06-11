@@ -12,10 +12,10 @@ public class Main {
 		
 		try {
 
-		      Class.forName("org.oracle.Driver");
-		      String url = "jdbc:oracle://localhost:1521/essai";
-		      String user = "postgres";
-		      String passwd = "";
+		      Class.forName("oracle.jdbc.driver.OracleDriver");
+		      String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		      String user = "michel";
+		      String passwd = "michel";
 		       
 		      Connection conn = DriverManager.getConnection(url, user, passwd);
 		      Statement state = conn.createStatement();
